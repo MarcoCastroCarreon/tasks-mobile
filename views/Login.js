@@ -23,6 +23,11 @@ const Login = ({ navigation }) => {
     </TouchableWithoutFeedback>
   );
 
+  const handleSubmit = () => {
+    setIsVisible(!isVisible);
+    navigation.navigate('Home');
+  }
+
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <Layout style={{ ...styles.container }} level="1">
@@ -41,7 +46,7 @@ const Login = ({ navigation }) => {
           <Button
             style={{ marginTop: "4%" }}
             status="info"
-            onPress={() => setIsVisible(true)}
+            onPress={() => handleSubmit()}
           >
             Sign In
           </Button>
